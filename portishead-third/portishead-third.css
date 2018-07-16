@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'kenyan_coffeebold';
+    src: url('font/kenyan_coffee_bd-webfont.ttf') format('ttf'),
+         url('font/kenyan_coffee_bd-webfont.woff2') format('woff2'),
+         url('font/kenyan_coffee_bd-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+body {
+    font-family: 'kenyan_coffeebold';
+    color: #016366;
+    font-size: 16px;
+    background: #fff;
+    text-align: center;
+}
+h1 {
+    margin: 0 0 15px 0;
+    padding: 0;
+    font-size: 25px;
+}
+h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+a {
+    color: #fff;
+}
+div {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* GENERAL WRAPPER */
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+    /* ALBUM COVER */
+    .cover {
+        min-width: 600px;
+        min-height: 600px;
+        background: #016366;
+        background: -moz-radial-gradient(center, ellipse cover, rgba(0,98,99,1) 58%, rgba(0,81,84,1) 100%); /* FF3.6-15 */
+        background: -webkit-radial-gradient(center, ellipse cover, rgba(0,98,99,1) 58%,rgba(0,81,84,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: radial-gradient(ellipse at center, rgba(0,98,99,1) 58%,rgba(0,81,84,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006263', endColorstr='#005154',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 50px;
+        -webkit-box-shadow: 10px 10px 16px -1px rgba(0,0,0,0.31);
+        -moz-box-shadow: 10px 10px 16px -1px rgba(0,0,0,0.31);
+        box-shadow: 10px 10px 16px -1px rgba(0,0,0,0.31);
+        transition: all 0.3s ease;
+    }
+
+        .cover > p {
+            display: inline;
+            margin: 0;
+            padding: 0;
+            color: #d9f4f5;
+            font-size: 631px;
+            position: absolute;
+            top: -31px;
+            right: 90px;
+        }
+            .cover > p.p {
+                z-index: 2;
+                opacity: 0.8;
+            }
+            .cover > p.three {
+                z-index: 1;
+                color: #4c9699;
+                opacity: 1;
+                top: -23px;
+                right: 89px;
+                font-size: 616px;
+            }
+
+@media (max-width: 720px) {
+    .cover {
+        transform: scale(0.7);
+        margin: -50px;
+    }
+}
+
+@media (max-width: 530px) {
+    .cover {
+        transform: scale(0.4);
+        margin: -150px;
+    }
+}
