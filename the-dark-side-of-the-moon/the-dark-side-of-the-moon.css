@@ -24,8 +24,25 @@ h2 {
     font-size: 15px;
 }
 a {
-    color: #fff;
+    color: rgb(143, 143, 143);
+    text-decoration: none;
 }
+    a:hover {
+        text-decoration: underline;
+    }
+
+a.back {
+    color: #fff;
+    text-decoration: none;
+    font-size: 40px;
+    margin-top: 20px;
+    padding: 0 5px;
+    transition: transform 0.3s ease;
+}
+    a.back:hover {
+        transform: translate(-5px, 0);
+    }
+
 div {
     display: block;
     margin: 0;
