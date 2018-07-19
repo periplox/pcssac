@@ -1,0 +1,178 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+body {
+    font-family: 'Fjalla One', sans-serif;
+    color: #fe5858;
+    font-size: 16px;
+    background: #fff;
+    text-align: center;
+}
+h1 {
+    margin: 0 0 15px 0;
+    padding: 0;
+    font-size: 25px;
+}
+h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+a {
+    color: rgb(143, 143, 143);
+    text-decoration: none;
+}
+    a:hover {
+        text-decoration: underline;
+    }
+
+a.back {
+    color: #fe5858;
+    text-decoration: none;
+    font-size: 40px;
+    margin-top: 20px;
+    padding: 0 5px;
+    transition: transform 0.3s ease;
+}
+    a.back:hover {
+        transform: translate(-5px, 0);
+    }
+    
+div {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* GENERAL WRAPPER */
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+    /* ALBUM COVER */
+    .cover {
+        min-width: 600px;
+        min-height: 600px;
+        background: #000;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 50px;
+        -webkit-box-shadow: 10px 10px 16px -1px rgba(0,0,0,0.31);
+        -moz-box-shadow: 10px 10px 16px -1px rgba(0,0,0,0.31);
+        box-shadow: 10px 10px 16px -1px rgba(0,0,0,0.31);
+        transition: all 0.3s ease;
+    }
+        .cover i.yellow {
+            width: 0;
+            height: 0;
+            border-bottom: 380px solid #e5e630;
+	        border-right: 250px solid transparent;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .cover i.red {
+            background-color: #fe5858;
+            width: 275px;
+            height: 175px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .cover i.white1 {
+            width: 0;
+            height: 0;
+            border-top: 330px solid #e5e7e4;
+	        border-left: 220px solid transparent;
+            position: absolute;
+            top: 0;
+            left: 55px;
+        }
+        .cover i.green {
+            background-color: #70d54b;
+            width: 270px;
+            height: 240px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: skewX(-24deg);
+            transform-origin: bottom right;
+        }
+        .cover i.white2 {
+            width: 0;
+            height: 0;
+            border-top: 136px solid #e5e7e4;
+	        border-right: 60px solid transparent;
+            position: absolute;
+            bottom: 104px;
+            right: 215px;
+        }
+        .cover i.blue {
+            width: 0;
+            height: 0;
+            border-bottom: 260px solid #4cbfeb;
+	        border-right: 235px solid transparent;
+            position: absolute;
+            top: 54px;
+            right: 40px;
+        }
+            .cover i.blue:after {
+                content: "";
+                width: 47px;
+                height: 150px;
+                background-color: #000;
+                position: absolute;
+                z-index: 1;
+                top: 130px;
+                right: -152px;
+                transform: rotate(24deg);
+            }
+        
+        .cover i.white3 {
+            width: 0;
+            height: 0;
+            border-top: 296px solid #e5e7e4;
+	        border-left: 262px solid transparent;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+            .cover i.white3:after {
+                content: "";
+                width: 47px;
+                height: 220px;
+                background-color: #000;
+                position: absolute;
+                z-index: 1;
+                top: -323px;
+                right: 46px;
+                transform: rotate(24deg);
+            }
+
+
+@media (max-width: 720px) {
+    .cover {
+        transform: scale(0.7);
+        margin: -50px;
+    }
+}
+
+@media (max-width: 530px) {
+    .cover {
+        transform: scale(0.4);
+        margin: -150px;
+    }
+}

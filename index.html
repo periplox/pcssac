@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pure CSS Album Cover</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
@@ -12,14 +13,26 @@
 </head>
 <body>
 
-    <header>
+    <header class="header">
         <div class="wrapper">
-            <h1>* Pure CSS Album Covers</h1>
+            <h1>&#8523; Pure CSS Album Covers</h1>
             <div>
                 <a href="" class="github"><i class="fab fa-github"></i></a>
             </div>
         </div>
     </header>
+
+    <section style="height: 2500px;"></section>
     
+    <script>
+        window.addEventListener('scroll', function (e) {
+            if(document.documentElement.scrollTop > 100) {
+                document.querySelector('.header').classList.add('shrink');
+            }
+            else {
+                document.querySelector('.header').classList.remove('shrink');
+            }
+        });
+    </script>
 </body>
 </html>
