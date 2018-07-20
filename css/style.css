@@ -67,3 +67,67 @@ header.shrink {
     header.shrink .github i {
         transform: scale(0.8);
     }
+
+
+section {
+    padding-top: 170px;
+}
+    section .grid {
+        display: grid;
+        grid-gap: 50px;
+        grid-template-columns: auto auto auto;
+    }
+        section .grid-item > a {
+            display: block;
+            text-decoration: none;
+        }
+        section .grid-item > a:hover img {
+            transform: scale(1.02) translate(-8px, -8px);
+            -webkit-box-shadow: 10px 10px 12px -4px rgba(0,0,0,0.34);
+            -moz-box-shadow: 10px 10px 12px -4px rgba(0,0,0,0.34);
+            box-shadow: 10px 10px 12px -4px rgba(0,0,0,0.34);
+        }
+            section .grid-item a img {
+                display: block;
+                width: 100%;
+                transition: transform .3s ease, box-shadow .3s ease;
+            }
+
+
+@media (max-width: 800px) {
+    section {
+        padding-top: 170px;
+    }
+        section .grid {
+            grid-gap: 30px;
+            grid-template-columns: auto auto;
+        }
+}
+
+@media (max-width: 600px) {
+    header {
+        height: 60px;
+    }
+        header h1 {
+            transform: scale(0.8);
+        }
+        header .github i {
+            transform: scale(0.8);
+        }
+
+    section {
+        padding-top: 110px;
+    }
+        section .grid {
+            display: grid;
+            grid-gap: 30px;
+            grid-template-columns: auto;
+        }
+}
+
+
+@media (max-width: 400px) {
+    header h1 {
+        font-size: 20px;
+    }
+}
